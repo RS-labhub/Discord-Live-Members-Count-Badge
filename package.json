@@ -1,0 +1,22 @@
+{
+  "name": "discord-live-members-count-bot",
+  "version": "1.0.0",
+  "description": "Add Discord live member count to your GitHub README using serverless badges.",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "discord",
+    "badge",
+    "shields",
+    "vercel",
+    "serverless",
+    "members",
+    "github"
+  ],
+  "author": "Rohan Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.10.0"
+  }
+}
