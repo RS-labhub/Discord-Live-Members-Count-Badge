@@ -6,9 +6,8 @@ module.exports = async (req, res) => {
   const guildId = req.query.guildId;
   if (!guildId) return res.status(400).send('Missing guildId');
 
-  // Discord logo (white on transparent background, base64 encoded SVG)
   const discordLogoBase64 =
-    'PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNDIuOTM1IDQwLjI0NmMtMi4zNjcgMS4xMTUtNC44ODIgMi4wMDUtNy41ODIgMi42MTEtMS4xNzYuMDI3LTEuNjE3LTEuNTQyLTEuNjE3LTEuNTQycy4yMTUtMS4yMTUgLjQwMy0yLjA2MWMyLjg3NC0uNjQ0IDUuNDEtMS41NDUgNy43OC0yLjY2NSAxLjA5My0uNTQxIDIuMDYxLS45NzkgMi44OS0xLjQzLjA3MSAxLjM1LjExIDIuNjk4LjExIDQuMDUxIDAgLjQyMi0uMDI2Ljg0My0uMDcyIDEuMjU3LS42OTkuMzY2LTEuNDY1LjcwNi0yLjI5OCAxLjAyNnoiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjI3LjQzOSIgcj0iMi4yNSIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjcuNDM5IiByPSIyLjI1Ii8+PHBhdGggZD0iTTMyIDRjMTUuNDY5IDAgMjggMTIuNTMxIDI4IDI4UzQ3LjQ2OSw2MCAzMiw2MCA0LDQ3LjQ2OSA0LDMyUzE2LjUzMSw0IDMyLDRaIiBmaWxsPSJub25lIi8+PC9nPjwvc3ZnPg==';
+    'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjcuMTQgOTYuMzYiPjxwYXRoIGZpbGw9IiM3Mjg5REEiIGQ9Ik0xMDcuMjgsOC41QTEwNS45NCwxMDUuOTQsMCwwLDAsODEuMzMsMGE3My4xOSw3My4xOSwwLDAsMC0zLjU4LDcuMzEsOTkuMjQsOTkuMjQsMCwwLDAsMjguNiwxMC44Niw3My40OCw3My40OCwwLDAsMCw0NC44LDBBMSwxLDAwLDAsMCw0NC44LDBBMSwxLDAsMCwwLDE4Ljg2LDguNUExMTAuNDUsMTEwLjQ1LDAsMCwwLDAsODYuNDdB MTA2LjM4LDEwNi4zOCwwLDAsMCwzMiw5Ljg5QTc3Ljc4LDc3Ljc4LDAsMCwwLDM5LDg2LjU4YTY3Ljg1LDY3Ljg1LDAsMCwxLTExLTUuMjdjLjkzLS42OCwxLjgyLTEuMzksMi42Ni0yLjE0YTcwLjQsNzAuNCwwLDAsMCw2MS44NywwYy44Ni43NSwxLjc1LDEuNDYsMi42NiwyLjE0YT Y3LjgxLDY3LjgxLDAsMCwxLTExLDUuMjdBNzc uNzYsNzcuNzYsMCwwLDAsNjAsODYuMzZhMTA2LjI1LDEwNi4yNSwwLDAsMCwzMi05Ljg5QTEwLjQ3LDExMC40NywwLDAsMCwxMDcuMjgsOC41Wk00Mi40NSw2NS40NGMtNi4yNSwwLTExLjM0LTUuNzEtMTEuMzQtMTIuNzRTMzYuMi wzOS45Niw0Mi40NSwzOS45NnMxMS4zNCw1LjcxLDExLjM0LDEyLjc0UzQ4LjcsNjUuNDQsNDIuNDUsNjUuNDRaTTg0LjY5LDY1LjQ0Yy02LjI1LDAtMTEuMzQtNS43MS0xMS4zNC0xMi43NFM3OC40NCwzOS45Niw4NC42OSwzOS45NnMxMS4zNCw1LjcxLDExLjM0LDEyLjc0UzkwLjk0LDY1LjQ0LDg0LjY5LDY1LjQ0WiIvPjwvc3ZnPg==';
 
   try {
     const r = await axios.get(
@@ -30,7 +29,7 @@ module.exports = async (req, res) => {
     });
 
     res.setHeader('Content-Type', 'image/svg+xml');
-    res.setHeader('Cache-Control', 'public, max-age=300'); // cache for 5 mins
+    res.setHeader('Cache-Control', 'public, max-age=300');
     res.send(svg);
   } catch (err) {
     console.error(err);
