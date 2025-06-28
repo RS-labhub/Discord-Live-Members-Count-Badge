@@ -23,21 +23,21 @@ All endpoints return badge-compatible JSON in Shields.io's `schemaVersion: 1` fo
 
 Returns the number of human (non-bot) members.
 
-[![members](https://discord-live-members-count-bot.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/MhZn5Nc39h)
+[![members](https://discord-live-members-count-bot.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ)
 
 
 ### `/discord-bots`
 
 Returns the number of bot accounts in the server.
 
-[![bots](https://img.shields.io/endpoint?url=https://discord-live-members-count-bot.vercel.app/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/YOUR_INVITE)
+[![bots](https://discord-live-members-count-bot.vercel.app/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ)
 
 
 ### `/discord-total`
 
 Returns both human and bot counts in a single badge.
 
-[![total](https://img.shields.io/endpoint?url=https://discord-live-members-count-bot.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/YOUR_INVITE)
+[![total members](https://discord-live-members-count-bot.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ)
 
 
 ## Shields.io Badge Usage
