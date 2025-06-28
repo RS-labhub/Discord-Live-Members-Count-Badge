@@ -23,7 +23,7 @@ All endpoints return badge-compatible JSON in Shields.io's `schemaVersion: 1` fo
 
 Returns the number of human (non-bot) members.
 
-[![members](https://discord-live-members-count-bot.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/MhZn5Nc39h)
+[![members](https://sturdy-engine-56qwx6rg65j3v9gx-3000.app.github.dev/api/discord-members?guildId=1179245642770559067)](https://discord.gg/MhZn5Nc39h)
 
 
 ### `/discord-bots`
