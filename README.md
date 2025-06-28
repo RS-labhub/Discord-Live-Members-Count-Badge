@@ -37,7 +37,8 @@ Returns the number of bot accounts in the server.
 
 Returns both human and bot counts in a single badge.
 
-[![total](https://img.shields.io/endpoint?url=https://discord-live-members-count-bot.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/YOUR_INVITE)
+[![total](https://<your-vercel-site>/api/discord-total?guildId=1179245642770559067)](https://discord.gg/MhZn5Nc39h)
+
 
 
 ## Shields.io Badge Usage
