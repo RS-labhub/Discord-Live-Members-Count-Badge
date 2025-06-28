@@ -19,7 +19,10 @@ module.exports = async (req, res) => {
     const svg = makeBadge({
       label: 'Members',
       message: `${r.data.approximate_member_count}`,
-      color: '7289DA'
+      color: '7289DA',
+      logo: 'discord',
+      labelColor: '555',
+      style: 'flat'
     });
 
     res.setHeader('Content-Type', 'image/svg+xml');
@@ -31,7 +34,9 @@ module.exports = async (req, res) => {
     const errorSvg = makeBadge({
       label: 'Members',
       message: 'error',
-      color: 'red'
+      color: 'red',
+      logo: 'discord',
+      style: 'flat'
     });
 
     res.setHeader('Content-Type', 'image/svg+xml');
