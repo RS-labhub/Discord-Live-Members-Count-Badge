@@ -4,7 +4,7 @@ const Redis = require('ioredis');
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const redis = new Redis(process.env.REDIS_URL);
 
-const CACHE_TTL = 300;
+const CACHE_TTL = 900;
 
 const fetchAllMembers = async (guildId) => {
   const cacheKey = `guild:${guildId}:members`;
