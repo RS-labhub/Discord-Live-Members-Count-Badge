@@ -641,7 +641,7 @@ export default function DiscordBadgeLanding() {
                 {
                   type: "discord-members",
                   label: "Discord Members",
-                  description: "Human members only - excludes bots from the count",
+                  description: "Human members only - includes bots also from the count",
                   icon: <Users className="w-6 h-6" />,
                   color: "bg-blue-500",
                   guildId: "1179245642770559067",

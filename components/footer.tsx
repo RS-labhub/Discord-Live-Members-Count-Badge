@@ -27,13 +27,6 @@ export default function Footer() {
                         >
                             Github
                         </Link>
-                        <Link
-                            href="https://rohan-sharma-portfolio.vercel.app/"
-                            target="_blank"
-                            className="text-slate-400 hover:text-white"
-                        >
-                            Portfolio
-                        </Link>
                         <Link href="/blog" target="_blank" className="text-slate-400 hover:text-white">
                             Blog
                         </Link>

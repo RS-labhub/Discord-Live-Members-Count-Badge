@@ -41,7 +41,7 @@ Or follow this [documentation](https://discord-live-members-count-badge.vercel.a
 Replace `YOUR_GUILD_ID` with your actual Discord server ID:
 
 ```markdown
-<!-- Human members only -->
+<!- All members -->
 [![Discord Members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
 
 <!-- Bot members only -->
@@ -78,7 +78,7 @@ All endpoints support optional parameters for full customization:
 
 | Endpoint | Description | Default Label | Example |
 |----------|-------------|---------------|---------|
-| `/api/discord-members` | Human members only | "Members" | [![members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+| `/api/discord-members` | All members | "Members" | [![members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
 | `/api/discord-bots` | Bot members only | "Bots" | [![bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
 | `/api/discord-total` | Total members with breakdown | "Total Users" | [![total members](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
 
