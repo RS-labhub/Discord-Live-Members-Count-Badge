@@ -135,7 +135,7 @@ export default function DiscordBadgeLanding() {
             >
               Dev Portfolio
             </Link>
-            <Link href="" target="_blank" className="text-slate-600 hover:text-slate-900 hidden sm:block">
+            <Link href="/blog" target="_blank" className="text-slate-600 hover:text-slate-900 hidden sm:block">
               Blog
             </Link>
             <Link href="https://github.com/RS-labhub/Discord-Live-Members-Count-Badge" className="text-slate-600 hover:text-slate-900">

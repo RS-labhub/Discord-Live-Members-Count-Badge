@@ -34,7 +34,7 @@ export default function Footer() {
                         >
                             Portfolio
                         </Link>
-                        <Link href="/" target="_blank" className="text-slate-400 hover:text-white">
+                        <Link href="/blog" target="_blank" className="text-slate-400 hover:text-white">
                             Blog
                         </Link>
                         <Link href="/documentation" className="text-slate-400 hover:text-white">
