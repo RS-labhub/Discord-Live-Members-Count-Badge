@@ -26,6 +26,7 @@ import {
 
 import Link from "next/link"
 import Footer from "@/components/footer"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function DiscordBadgeLanding() {
   const [guildId, setGuildId] = useState("")
@@ -673,6 +674,7 @@ export default function DiscordBadgeLanding() {
 
       {/* Footer */}
       <Footer />
+      <Analytics />
     </div>
   )
 }
