@@ -102,6 +102,36 @@ Visit our [Badge Playground](https://discord-live-members-count-badge.vercel.app
 - **⚡ Live Preview** - See changes in real-time
 - **📋 Copy & Paste** - Get ready-to-use markdown code
 
+## Server Widget JSON API (for Online Members Only)
+Discord provides a public widget API that exposes limited server data like online member count:
+
+```
+https://discord.com/api/guilds/YOUR_GUILD_ID/widget.json
+```
+
+Example (for a server with ID `117924XXXXXX0559067`):
+
+```
+https://discord.com/api/guilds/117924XXXXXX0559067/widget.json
+```
+
+This API is useful for basic stats and online presence but **only returns currently online users**, not the full member list.
+
+To enable this:
+
+1. Open your Discord server settings
+2. Go to the **Widget** section
+3. Toggle on **Enable Server Widget**
+
+Note: this API is public and does not require authentication.
+
+[![Only Online Members](https://img.shields.io/discord/1179245642770559067?logo=discord&logoColor=%23FFFFFF&label=Only%20Online%20Members&color=%236963ff)](https://discord.gg/MhZn5Nc39h)
+
+```md
+[![Only Online Members](https://img.shields.io/discord/1179245642770559067?logo=discord&logoColor=%23FFFFFF&label=Only%20Online%20Members&color=%236963ff)](https://discord.gg/MhZn5Nc39h)
+```
+
+
 ## 🏗️ Project Structure
 
 ```
