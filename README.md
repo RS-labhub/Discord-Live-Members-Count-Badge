@@ -128,7 +128,7 @@ Note: this API is public and does not require authentication.
 [![Only Online Members](https://img.shields.io/discord/1179245642770559067?logo=discord&logoColor=%23FFFFFF&label=Only%20Online%20Members&color=%236963ff)](https://discord.gg/MhZn5Nc39h)
 
 ```md
-[![Only Online Members](https://img.shields.io/discord/1179245642770559067?logo=discord&logoColor=%23FFFFFF&label=Only%20Online%20Members&color=%236963ff)](https://discord.gg/MhZn5Nc39h)
+[![Only Online Members](https://img.shields.io/discord/YOUR_SERVER_ID?logo=discord&logoColor=%23FFFFFF&label=Only%20Online%20Members&color=%236963ff)](https://discord.gg/MhZn5Nc39h)
 ```
 
 
