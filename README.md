@@ -1,117 +1,276 @@
-# Discord Live Members Count Bot For GitHub Readme Badge
+![banner](https://raw.githubusercontent.com/RS-labhub/Discord-Live-Members-Count-Badge/master/public/og-image.png)
 
-This is a simple Node.js-based API that allows you to show live member statistics of your Discord server directly in your GitHub README using Shields.io badges.
+# 🎯 Discord Live Members Count Badge
 
-It supports:
+**Add beautiful, real-time Discord member count badges to your GitHub README**
 
-* Total members (users + bots)
-* Human members only
-* Bot members only
-
-## Features
-
-* Uses the Discord API with full pagination to fetch all server members
-* Separates human users and bots for more granular badges
-* Outputs Shields.io-compatible JSON endpoints
-* Easily deployable to platforms like Vercel, Render, or Railway
-
-## API Endpoints
-
-All endpoints return badge-compatible JSON in Shields.io's `schemaVersion: 1` format.
-
-### `/discord-members`
-
-Returns the number of human (non-bot) members.
-
-[![members](https://discord-live-members-count-bot.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Site](https://img.shields.io/badge/Live-Site-brightgreen.svg)](https://discord-live-members-count-badge.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Rohan_Sharma-blueviolet.svg)](https://rohan-sharma-portfolio.vercel.app)
 
 
-### `/discord-bots`
+## ✨ Features
 
-Returns the number of bot accounts in the server.
+- **🔄 Real-time Updates** - Live member count with smart caching (5-minute intervals)
+- **👥 Multiple Badge Types** - Total members, human-only, or bot-only counts
+- **🛡️ Safe & Secure** - Uses Discord API's `with_counts=true` for public access
+- **⚡ Serverless Ready** - Deploy to Vercel, Railway, Render, or any platform
+- **🎨 Fully Customizable** - Custom colors, labels, and scaling options
+- **📱 Mobile Responsive** - Optimized playground interface for all devices
+- **📦 Zero Config** - Just add your bot and start using
 
-[![bots](https://discord-live-members-count-bot.vercel.app/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ)
+## 🚀 Quick Start
 
+### 1. Add Bot to Your Server
 
-### `/discord-total`
+First, invite our bot to your Discord server:
 
-Returns both human and bot counts in a single badge.
+[**🤖 Add Bot to Server**](https://discord.com/oauth2/authorize?client_id=1388440480102092860&permissions=1040&integration_type=0&scope=bot)
 
-[![total members](https://discord-live-members-count-bot.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ)
+### 2. Enable Server Widget
 
+1. Go to your Discord server
+2. Navigate to **Server Settings** → **Engagement**
+3. Enable **Server Widget**
+4. Copy your **Server ID**
 
-## Shields.io Badge Usage
+Or follow this [documentation](https://discord-live-members-count-badge.vercel.app/documentation)
 
-Embed the following in your GitHub README:
+### 3. Use the Badges
 
-```md
-[![Users](https://img.shields.io/endpoint?url=https://your-domain.com/discord-members)](https://discord.gg/yourinvite)
-[![Bots](https://img.shields.io/endpoint?url=https://your-domain.com/discord-bots)](https://discord.gg/yourinvite)
-[![Total Members](https://img.shields.io/endpoint?url=https://your-domain.com/discord-total)](https://discord.gg/yourinvite)
+Replace `YOUR_GUILD_ID` with your actual Discord server ID:
+
+```markdown
+<!-- Human members only -->
+[![Discord Members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+
+<!-- Bot members only -->
+[![Discord Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+
+<!-- Total members (users + bots) -->
+[![Discord Total](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
 ```
 
-Replace:
+## 🎨 Customization Options
 
-* `your-domain.com` with your actual deployed backend URL
-* `yourinvite` with your Discord server invite code
+All endpoints support optional parameters for full customization:
 
-## Server Widget JSON API (for Online Members Only)
+### Available Parameters
 
-Discord provides a public widget API that exposes limited server data like online member count:
+- **`color`** (optional) - Hex color without # (default: 5865F2)
+- **`label`** (optional) - Custom text label (default: varies by endpoint)
+- **`scale`** (optional) - Size multiplier from 0.5 to 10.0 (default: 1)
 
-```
-https://discord.com/api/guilds/YOUR_GUILD_ID/widget.json
-```
+### Customized Examples
 
-Example (for a server with ID `117924XXXXXX0559067`):
+```markdown
+<!-- Green badge with custom label and larger scale -->
+[![Users](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
 
-```
-https://discord.com/api/guilds/117924XXXXXX0559067/widget.json
-```
+<!-- Red bot count with custom styling -->
+[![Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
 
-This API is useful for basic stats and online presence but **only returns currently online users**, not the full member list.
-
-To enable this:
-
-1. Open your Discord server settings
-2. Go to the **Widget** section
-3. Toggle on **Enable Server Widget**
-
-Note: this API is public and does not require authentication.
-
-## Setup Instructions
-
-1. Clone this repository
-2. Install dependencies:
-
-```bash
-npm install
+<!-- Purple total with community branding -->
+[![Community](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)
 ```
 
-3. Create a `.env` file with:
+## 📊 API Endpoints
+
+| Endpoint | Description | Default Label | Example |
+|----------|-------------|---------------|---------|
+| `/api/discord-members` | Human members only | "Members" | [![members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+| `/api/discord-bots` | Bot members only | "Bots" | [![bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+| `/api/discord-total` | Total members with breakdown | "Total Users" | [![total members](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+
+### Parameters
+
+- **`guildId`** or **`serverId`** (required) - Your Discord server ID
+- **`color`** (optional) - Hex color without # (e.g., 5865F2, 27ae60, e74c3c)
+- **`label`** (optional) - Custom text label (e.g., "Users", "Community", "Members")
+- **`scale`** (optional) - Size multiplier from 0.5 to 10.0 (e.g., 1.2, 0.8, 2.0)
+- **Response Format** - SVG badge image
+- **Cache Duration** - 5 minutes for optimal performance
+
+## 🎮 Interactive Playground
+
+Visit our [Badge Playground](https://discord-live-members-count-badge.vercel.app/) to:
+
+- **🎨 Customize Colors** - Choose from presets or use custom hex colors
+- **📝 Edit Labels** - Create custom text for your badges
+- **📏 Adjust Scale** - Resize badges from 0.5x to 3x (up to 10x in URL)
+- **📱 Mobile Friendly** - Fully responsive design for all devices
+- **⚡ Live Preview** - See changes in real-time
+- **📋 Copy & Paste** - Get ready-to-use markdown code
+
+## 🏗️ Project Structure
+
+```
+discord-live-members-badge/
+├── app/
+│   ├── api/
+│   │   ├── discord-members/
+│   │   │   └── route.js
+│   │   ├── discord-bots/
+│   │   │   └── route.js
+│   │   └── discord-total/
+│   │       └── route.js
+│   ├── documentation/
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   ├── page.tsx                 # Interactive playground
+│   ├── globals.css
+│   └── not-found.tsx
+├── components/
+│   └── ui/                      # shadcn/ui components
+├── lib/
+├── utils/
+│   └── fetchAllMembers.js       # Discord API utility
+├── .env                         # Environment variables
+└── ... (other config files)
+```
+
+## 🔧 Self-Hosting
+
+### Prerequisites
+
+- Node.js 18+ 
+- Discord Bot Token
+- Serverless platform account (Vercel, Railway, etc.)
+
+### Environment Variables
+
+Create a `.env` file:
 
 ```env
-DISCORD_BOT_TOKEN=your_discord_bot_token
-GUILD_ID=your_discord_server_id
+DISCORD_BOT_TOKEN=your_bot_token_here
 ```
 
-4. Start the server locally:
+### Local Development
 
 ```bash
-node index.js
+# Clone the repository
+git clone https://github.com/your-username/discord-live-members-badge.git
+cd discord-live-members-badge
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env
+# Add your DISCORD_BOT_TOKEN
+
+# Start development server
+npm run dev
 ```
 
-## Deployment
+### Testing
 
-You can deploy this server to any Node.js-compatible hosting service. Common options include:
+Test your badges locally:
 
-* [Vercel](https://vercel.com/)
-* [Render](https://render.com/)
-* [Railway](https://railway.app/)
-* [Glitch](https://glitch.com/)
+```
+http://localhost:3000/api/discord-members?guildId=YOUR_GUILD_ID&color=5865F2&label=Members&scale=1.2
+```
 
-Make sure to add the required environment variables during setup.
+## 🤖 Creating Your Own Bot
 
-## License
+If you want to use your own Discord bot:
 
-MIT License
+1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
+2. Create a new application
+3. Go to the **Bot** section
+4. Create a bot and copy the token
+5. Invite the bot to your server with these permissions:
+   - View Channels
+   - Manage Channels
+
+### Bot Permissions
+
+The bot needs minimal permissions:
+- **View Channels** (1024)
+- **Manage Channels** (16)
+
+Total permission integer: `1040`
+
+## 📈 Performance & Caching
+
+- **Response Time**: < 500ms average
+- **Cache Duration**: 5 minutes per guild
+- **Rate Limiting**: Built-in Discord API rate limit handling
+- **Uptime**: 99.9% availability
+- **Mobile Optimized**: Responsive design for all devices
+
+## 🎨 Color Presets
+
+The playground includes these popular color presets:
+
+- **Discord**: `5865F2` (Default Discord blue)
+- **Green**: `27ae60` (Success/positive)
+- **Blue**: `3498db` (Information)
+- **Red**: `e74c3c` (Error/warning)
+- **Orange**: `f39c12` (Warning)
+- **Purple**: `9b59b6` (Creative)
+- **Pink**: `e91e63` (Accent)
+- **Teal**: `1abc9c` (Modern)
+
+But yeah, you can add your custom color anytime.
+
+## 📱 Mobile Responsiveness
+
+The badge playground is fully optimized for mobile devices:
+
+- **Responsive Grid**: Adapts to screen size (1 column on mobile, 2 on desktop)
+- **Touch-Friendly**: Large buttons and inputs for mobile interaction
+- **Optimized Layout**: Compact design for smaller screens
+- **Readable Text**: Appropriate font sizes across devices
+
+## 🛠️ Development
+
+### API Response Format
+
+All endpoints return SVG images with:
+- **Content-Type**: `image/svg+xml`
+- **Cache-Control**: `public, max-age=300` (5 minutes)
+- **Error Handling**: Returns error badge on failure
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/RS-labhub/Discord-Live-Members-Count-Badge/blob/main/LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [badge-maker](https://www.npmjs.com/package/badge-maker) for beautiful badge generation
+- [Discord for Developers](https://discord.com/developers) community for inspiration
+- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
+- [Tailwind CSS](https://tailwindcss.com/) for responsive styling
+- [LLMWare](https://llmware.ai) for allowing to show their Discord Server Stats.
+
+## 📞 Support
+
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/RS-labhub/discord-live-members-badge/issues)
+- 💬 **Questions**: [GitHub Discussions](https://github.com/RS-labhub/discord-live-members-badge/discussions)
+- 📧 **Email**: rs4101976@gmail.com
+- 🌐 **Documentation**: [Live Documentation](https://discord-live-members-count-badge.vercel.app/documentation)
+
+---
+
+## Meet the Author
+
+<img  src="https://raw.githubusercontent.com/RS-labhub/Radhika/master/public/Author.jpg" alt="Author">
+
+<div align="center">
+
+**Made with ❤️ by [Rohan Sharma](https://github.com/RS-labhub), driven by dreams of Radhika Sharma 🫰**
+
+[⭐ Star this repo](https://github.com/RS-labhub/discord-live-members-badge) if you found it helpful!
+
+</div>
