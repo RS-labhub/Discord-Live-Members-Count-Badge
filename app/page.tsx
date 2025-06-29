@@ -233,6 +233,61 @@ export default function DiscordBadgeLanding() {
           </div>
         </section>
 
+        {/* Badge Generator */}
+        {showBadges && guildId && (
+          <section id="badges" className="py-16 px-4 bg-white">
+            <div className="container mx-auto max-w-6xl">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">Your Discord Badges</h2>
+                <p className="text-slate-600">Copy the markdown code below to add these badges to your README</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {badges.map((badge) => {
+                  const badgeUrl = `https://discord-live-members-count-bot.vercel.app/api/${badge.endpoint}?guildId=${guildId}`
+                  const markdownCode = `[![${badge.type}](${badgeUrl})](${inviteLink || "https://discord.gg/your-invite"})`
+
+                  return (
+                    <Card key={badge.type} className="relative">
+                      <CardHeader>
+                        <div className="flex items-center space-x-2">
+                          <div
+                            className={`w-8 h-8 ${badge.color} rounded-lg flex items-center justify-center text-white`}
+                          >
+                            {badge.icon}
+                          </div>
+                          <CardTitle className="text-lg">{badge.label}</CardTitle>
+                        </div>
+                        <CardDescription>{badge.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        {/* Markdown Code Only */}
+                        <div className="relative">
+                          <div className="bg-slate-900 text-slate-100 p-3 rounded-lg text-sm font-mono overflow-x-auto">
+                            {markdownCode}
+                          </div>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="absolute top-2 right-2 bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border-slate-600"
+                            onClick={() => copyToClipboard(markdownCode, badge.type)}
+                          >
+                            {copiedBadge === badge.type ? (
+                              <CheckCircle className="w-4 h-4 text-green-400" />
+                            ) : (
+                              <Copy className="w-4 h-4" />
+                            )}
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Badge Playground */}
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
