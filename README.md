@@ -19,6 +19,13 @@
 - **📱 Mobile Responsive** - Optimized playground interface for all devices
 - **📦 Zero Config** - Just add your bot and start using
 
+## 🎬 Project Showcase
+
+| Preview             | Description        |
+|---------------------|--------------------|
+| [![YouTube Demo](https://raw.githubusercontent.com/RS-labhub/Discord-Live-Members-Count-Badge/master/public/thumbnail.png)](https://youtu.be/jSLE3u_2vag) | 🎬 **YouTube Demo**<br>Click the image to watch the full demo. |
+| [![Blog Post](https://raw.githubusercontent.com/RS-labhub/Discord-Live-Members-Count-Badge/master/public/blogCover.png)](https://dev.to/rohan_sharma/heres-how-i-created-a-real-time-discord-badge-for-github-readme-51j6) | 📝 **Blog Post**<br>Read the blog for in-depth explanation. |
+
 ## 🚀 Quick Start
 
 ### 1. Add Bot to Your Server
