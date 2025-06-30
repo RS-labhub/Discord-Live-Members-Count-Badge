@@ -108,10 +108,19 @@ export default function DiscordBadgeLanding() {
   ]
 
   // Generate playground badge URL
-  const playgroundGuildId = guildId || "1179245642770559067"
-  const playgroundBadgeUrl = `https://discord-live-members-count-badge.vercel.app/api/${selectedEndpoint}?guildId=${playgroundGuildId}&color=${playgroundColor}&label=${encodeURIComponent(playgroundLabel)}&scale=${playgroundScale[0]}`
-  const playgroundInvite = inviteLink || "https://discord.gg/bphreFK4NJ"
-  const playgroundMarkdown = `[![${playgroundLabel}](${playgroundBadgeUrl})](${playgroundInvite})`
+  const hasCustomGuildId = !!guildId?.trim();
+  const hasCustomInvite = !!inviteLink?.trim();
+
+  const playgroundGuildId = hasCustomGuildId ? guildId : "1179245642770559067";
+  const playgroundInvite = hasCustomGuildId
+    ? (hasCustomInvite ? inviteLink : "")
+    : "https://discord.gg/bphreFK4NJ";     // Default invite for fallback badge
+
+  const playgroundBadgeUrl = `https://discord-live-members-count-badge.vercel.app/api/${selectedEndpoint}?guildId=${playgroundGuildId}&color=${playgroundColor}&label=${encodeURIComponent(playgroundLabel)}&scale=${playgroundScale[0]}`;
+
+  const playgroundMarkdown = playgroundInvite
+    ? `[![${playgroundLabel}](${playgroundBadgeUrl})](${playgroundInvite})`
+    : `![${playgroundLabel}](${playgroundBadgeUrl})`;
 
   return (
     <>
@@ -137,7 +146,7 @@ export default function DiscordBadgeLanding() {
               >
                 Dev Portfolio
               </Link>
-              <Link href="/blog" target="_blank" className="text-slate-600 hover:text-slate-900 hidden sm:block">
+              <Link href="https://dev.to/rohan_sharma/heres-how-i-created-a-real-time-discord-badge-for-github-readme-51j6" target="_blank" className="text-slate-600 hover:text-slate-900 hidden sm:block">
                 Blog
               </Link>
               <Link href="https://github.com/RS-labhub/Discord-Live-Members-Count-Badge" className="text-slate-600 hover:text-slate-900">
@@ -244,8 +253,10 @@ export default function DiscordBadgeLanding() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {badges.map((badge) => {
-                  const badgeUrl = `https://discord-live-members-count-bot.vercel.app/api/${badge.endpoint}?guildId=${guildId}`
-                  const markdownCode = `[![${badge.type}](${badgeUrl})](${inviteLink || "https://discord.gg/your-invite"})`
+                  const badgeUrl = `https://discord-live-members-count-badge.vercel.app/api/${badge.endpoint}?guildId=${guildId}`
+                  const markdownCode = inviteLink
+                    ? `[![${badge.type}](${badgeUrl})](${inviteLink})`
+                    : `![${badge.type}](${badgeUrl})`
 
                   return (
                     <Card key={badge.type} className="relative">
@@ -261,6 +272,33 @@ export default function DiscordBadgeLanding() {
                         <CardDescription>{badge.description}</CardDescription>
                       </CardHeader>
                       <CardContent className="space-y-4">
+                        {/* Badge Preview */}
+                        <div className="flex justify-center p-6 md:p-8 bg-slate-50 rounded-lg">
+                          {inviteLink ? (
+                            <a href={inviteLink} target="_blank" rel="noopener noreferrer">
+                              <img
+                                key={badgeUrl}
+                                src={badgeUrl || "/placeholder.svg"}
+                                alt="Custom badge preview"
+                                className="max-w-full h-auto"
+                                onError={(e) => {
+                                  e.currentTarget.src = `/placeholder.svg?height=20&width=120&text=Preview`
+                                }}
+                              />
+                            </a>
+                          ) : (
+                            <img
+                              key={badgeUrl}
+                              src={badgeUrl || "/placeholder.svg"}
+                              alt="Custom badge preview"
+                              className="max-w-full h-auto"
+                              onError={(e) => {
+                                e.currentTarget.src = `/placeholder.svg?height=20&width=120&text=Preview`
+                              }}
+                            />
+                          )}
+                        </div>
+
                         {/* Markdown Code Only */}
                         <div className="relative">
                           <div className="bg-slate-900 text-slate-100 p-3 rounded-lg text-sm font-mono overflow-x-auto">
@@ -421,15 +459,29 @@ export default function DiscordBadgeLanding() {
                 <CardContent className="flex flex-col flex-1 space-y-4 md:space-y-6">
                   {/* Badge Preview */}
                   <div className="flex justify-center p-6 md:p-8 bg-slate-50 rounded-lg">
-                    <img
-                      key={playgroundBadgeUrl}
-                      src={playgroundBadgeUrl || "/placeholder.svg"}
-                      alt="Custom badge preview"
-                      className="max-w-full h-auto"
-                      onError={(e) => {
-                        e.currentTarget.src = `/placeholder.svg?height=20&width=120&text=Preview`
-                      }}
-                    />
+                    {playgroundInvite ? (
+                      <a href={playgroundInvite} target="_blank" rel="noopener noreferrer">
+                        <img
+                          key={playgroundBadgeUrl}
+                          src={playgroundBadgeUrl || "/placeholder.svg"}
+                          alt="Custom badge preview"
+                          className="max-w-full h-auto"
+                          onError={(e) => {
+                            e.currentTarget.src = `/placeholder.svg?height=20&width=120&text=Preview`
+                          }}
+                        />
+                      </a>
+                    ) : (
+                      <img
+                        key={playgroundBadgeUrl}
+                        src={playgroundBadgeUrl || "/placeholder.svg"}
+                        alt="Custom badge preview"
+                        className="max-w-full h-auto"
+                        onError={(e) => {
+                          e.currentTarget.src = `/placeholder.svg?height=20&width=120&text=Preview`
+                        }}
+                      />
+                    )}
                   </div>
 
                   {/* Generated URL */}
