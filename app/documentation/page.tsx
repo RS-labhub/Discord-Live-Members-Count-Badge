@@ -114,7 +114,7 @@ export default function Documentation() {
               >
                 Dev Portfolio
               </Link>
-              <Link href="/blog" target="_blank" className="text-slate-600 hover:text-slate-900 hidden md:block text-sm">
+              <Link href="https://dev.to/rohan_sharma/heres-how-i-created-a-real-time-discord-badge-for-github-readme-4adg" target="_blank" className="text-slate-600 hover:text-slate-900 hidden md:block text-sm">
                 Blog
               </Link>
               <Link href="https://github.com/RS-labhub/Discord-Live-Members-Count-Badge" className="text-slate-600 hover:text-slate-900">

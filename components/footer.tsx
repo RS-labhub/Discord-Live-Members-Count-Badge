@@ -27,7 +27,7 @@ export default function Footer() {
                         >
                             Github
                         </Link>
-                        <Link href="https://dev.to/rohan_sharma/heres-how-i-created-a-real-time-discord-badge-for-github-readme-51j6" target="_blank" className="text-slate-400 hover:text-white">
+                        <Link href="https://dev.to/rohan_sharma/heres-how-i-created-a-real-time-discord-badge-for-github-readme-4adg" target="_blank" className="text-slate-400 hover:text-white">
                             Blog
                         </Link>
                         <Link href="/documentation" className="text-slate-400 hover:text-white">
