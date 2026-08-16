@@ -33,6 +33,12 @@ export default function Footer() {
                         <Link href="/documentation" className="text-slate-400 hover:text-white">
                             Documentation
                         </Link>
+                        <Link href="/terms" className="text-slate-400 hover:text-white">
+                            Terms
+                        </Link>
+                        <Link href="/privacy" className="text-slate-400 hover:text-white">
+                            Privacy
+                        </Link>
                         <a
                             href="mailto:specialrohansharma200@gmail.com"
                             className="text-slate-400 hover:text-white"
