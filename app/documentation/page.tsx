@@ -40,21 +40,21 @@ export default function Documentation() {
       description: "Returns human members count only",
       icon: <Users className="w-4 h-4" />,
       color: "bg-blue-500",
-      example: "https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=1179245642770559067",
+      example: "https://live-members-count.rohansrma.me/api/discord-members?guildId=1179245642770559067",
     },
     {
       path: "/api/discord-bots",
       description: "Returns bot members count only",
       icon: <Bot className="w-4 h-4" />,
       color: "bg-green-500",
-      example: "https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=1179245642770559067",
+      example: "https://live-members-count.rohansrma.me/api/discord-bots?guildId=1179245642770559067",
     },
     {
       path: "/api/discord-total",
       description: "Returns total count with breakdown",
       icon: <Activity className="w-4 h-4" />,
       color: "bg-purple-500",
-      example: "https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=1179245642770559067",
+      example: "https://live-members-count.rohansrma.me/api/discord-total?guildId=1179245642770559067",
     },
   ]
 
@@ -215,7 +215,7 @@ export default function Documentation() {
                     </p>
                     <div className="bg-slate-900 text-slate-100 p-3 rounded-lg text-xs md:text-sm font-mono relative overflow-x-auto">
                       <code className="break-all">
-                        {`[![Discord](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`}
+                        {`[![Discord](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`}
                       </code>
                       <Button
                         size="sm"
@@ -223,7 +223,7 @@ export default function Documentation() {
                         className="absolute top-2 right-2 bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border-slate-600 h-8 w-8 p-0"
                         onClick={() =>
                           copyToClipboard(
-                            `[![Discord](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`,
+                            `[![Discord](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`,
                             "quickstart",
                           )
                         }
@@ -530,7 +530,7 @@ export default function Documentation() {
                   <h3 className="font-semibold mb-3">Basic Usage</h3>
                   <div className="bg-slate-900 text-slate-100 p-4 rounded-lg text-xs md:text-sm font-mono relative overflow-x-auto">
                     <code className="break-all">
-                      {`[![Discord](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`}
+                      {`[![Discord](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`}
                     </code>
                     <Button
                       size="sm"
@@ -538,7 +538,7 @@ export default function Documentation() {
                       className="absolute top-2 right-2 bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border-slate-600 h-8 w-8 p-0"
                       onClick={() =>
                         copyToClipboard(
-                          `[![Discord](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`,
+                          `[![Discord](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`,
                           "basic",
                         )
                       }
@@ -556,9 +556,9 @@ export default function Documentation() {
                   <h3 className="font-semibold mb-3">Multiple Badges</h3>
                   <div className="bg-slate-900 text-slate-100 p-4 rounded-lg text-xs md:text-sm font-mono relative overflow-x-auto">
                     <code className="break-all whitespace-pre-wrap">
-                      {`[![Discord Members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
-[![Discord Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
-[![Discord Total](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`}
+                      {`[![Discord Members](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Total](https://live-members-count.rohansrma.me/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`}
                     </code>
                     <Button
                       size="sm"
@@ -566,9 +566,9 @@ export default function Documentation() {
                       className="absolute top-2 right-2 bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border-slate-600 h-8 w-8 p-0"
                       onClick={() =>
                         copyToClipboard(
-                          `[![Discord Members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
-[![Discord Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
-[![Discord Total](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`,
+                          `[![Discord Members](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Total](https://live-members-count.rohansrma.me/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)`,
                           "multiple",
                         )
                       }
@@ -587,13 +587,13 @@ export default function Documentation() {
                   <div className="bg-slate-900 text-slate-100 p-4 rounded-lg text-xs md:text-sm font-mono relative overflow-x-auto">
                     <code className="break-all whitespace-pre-wrap">
                       {`<!-- Green badge with custom label -->
-[![Users](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
+[![Users](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
 
 <!-- Red bot count with larger scale -->
-[![Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
+[![Bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
 
 <!-- Purple total with custom styling -->
-[![Total](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)`}
+[![Total](https://live-members-count.rohansrma.me/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)`}
                     </code>
                     <Button
                       size="sm"
@@ -602,13 +602,13 @@ export default function Documentation() {
                       onClick={() =>
                         copyToClipboard(
                           `<!-- Green badge with custom label -->
-[![Users](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
+[![Users](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
 
 <!-- Red bot count with larger scale -->
-[![Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
+[![Bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
 
 <!-- Purple total with custom styling -->
-[![Total](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)`,
+[![Total](https://live-members-count.rohansrma.me/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)`,
                           "customized",
                         )
                       }
@@ -629,17 +629,17 @@ export default function Documentation() {
                       <h4 className="text-lg md:text-xl font-bold">🚀 My Awesome Discord Server</h4>
                       <div className="flex flex-wrap gap-2">
                         <img
-                          src="https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=1179245642770559067"
+                          src="https://live-members-count.rohansrma.me/api/discord-members?guildId=1179245642770559067"
                           alt="Discord members"
                           className="h-5"
                         />
                         <img
-                          src="https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=1179245642770559067"
+                          src="https://live-members-count.rohansrma.me/api/discord-bots?guildId=1179245642770559067"
                           alt="Discord bots"
                           className="h-5"
                         />
                         <img
-                          src="https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=1179245642770559067"
+                          src="https://live-members-count.rohansrma.me/api/discord-total?guildId=1179245642770559067"
                           alt="Discord total"
                           className="h-5"
                         />
