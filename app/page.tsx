@@ -116,7 +116,7 @@ export default function DiscordBadgeLanding() {
     ? (hasCustomInvite ? inviteLink : "")
     : "https://discord.gg/bphreFK4NJ";     // Default invite for fallback badge
 
-  const playgroundBadgeUrl = `https://discord-live-members-count-badge.vercel.app/api/${selectedEndpoint}?guildId=${playgroundGuildId}&color=${playgroundColor}&label=${encodeURIComponent(playgroundLabel)}&scale=${playgroundScale[0]}`;
+  const playgroundBadgeUrl = `https://live-members-count.rohansrma.me/api/${selectedEndpoint}?guildId=${playgroundGuildId}&color=${playgroundColor}&label=${encodeURIComponent(playgroundLabel)}&scale=${playgroundScale[0]}`;
 
   const playgroundMarkdown = playgroundInvite
     ? `[![${playgroundLabel}](${playgroundBadgeUrl})](${playgroundInvite})`
@@ -253,7 +253,7 @@ export default function DiscordBadgeLanding() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {badges.map((badge) => {
-                  const badgeUrl = `https://discord-live-members-count-badge.vercel.app/api/${badge.endpoint}?guildId=${guildId}`
+                  const badgeUrl = `https://live-members-count.rohansrma.me/api/${badge.endpoint}?guildId=${guildId}`
                   const markdownCode = inviteLink
                     ? `[![${badge.type}](${badgeUrl})](${inviteLink})`
                     : `![${badge.type}](${badgeUrl})`
@@ -718,7 +718,7 @@ export default function DiscordBadgeLanding() {
                   invite: "bphreFK4NJ",
                 },
               ].map((demo, index) => {
-                const demoUrl = `https://discord-live-members-count-badge.vercel.app/api/${demo.type}?guildId=${demo.guildId}`
+                const demoUrl = `https://live-members-count.rohansrma.me/api/${demo.type}?guildId=${demo.guildId}`
                 const demoCode = `[![${demo.label.toLowerCase()}](${demoUrl})](https://discord.gg/${demo.invite})`
 
                 return (
