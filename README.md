@@ -49,13 +49,13 @@ Replace `YOUR_GUILD_ID` with your actual Discord server ID:
 
 ```markdown
 <!- All members -->
-[![Discord Members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Members](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
 
 <!-- Bot members only -->
-[![Discord Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
 
 <!-- Total members (users + bots) -->
-[![Discord Total](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
+[![Discord Total](https://live-members-count.rohansrma.me/api/discord-total?guildId=YOUR_GUILD_ID)](https://discord.gg/your-invite)
 ```
 
 ## 🎨 Customization Options
@@ -72,22 +72,22 @@ All endpoints support optional parameters for full customization:
 
 ```markdown
 <!-- Green badge with custom label and larger scale -->
-[![Users](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
+[![Users](https://live-members-count.rohansrma.me/api/discord-members?guildId=YOUR_GUILD_ID&color=27ae60&label=Users&scale=1.2)](https://discord.gg/your-invite)
 
 <!-- Red bot count with custom styling -->
-[![Bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
+[![Bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=YOUR_GUILD_ID&color=e74c3c&label=Bots&scale=1.5)](https://discord.gg/your-invite)
 
 <!-- Purple total with community branding -->
-[![Community](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)
+[![Community](https://live-members-count.rohansrma.me/api/discord-total?guildId=YOUR_GUILD_ID&color=9b59b6&label=Community&scale=0.8)](https://discord.gg/your-invite)
 ```
 
 ## 📊 API Endpoints
 
 | Endpoint | Description | Default Label | Example |
 |----------|-------------|---------------|---------|
-| `/api/discord-members` | All members | "Members" | [![members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
-| `/api/discord-bots` | Bot members only | "Bots" | [![bots](https://discord-live-members-count-badge.vercel.app/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
-| `/api/discord-total` | Total members with breakdown | "Total Users" | [![total members](https://discord-live-members-count-badge.vercel.app/api/discord-total?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+| `/api/discord-members` | All members | "Members" | [![members](https://live-members-count.rohansrma.me/api/discord-members?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+| `/api/discord-bots` | Bot members only | "Bots" | [![bots](https://live-members-count.rohansrma.me/api/discord-bots?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
+| `/api/discord-total` | Total members with breakdown | "Total Users" | [![total members](https://live-members-count.rohansrma.me/api/discord-total?guildId=1179245642770559067)](https://discord.gg/bphreFK4NJ) |
 
 ### Parameters
 
@@ -100,7 +100,7 @@ All endpoints support optional parameters for full customization:
 
 ## 🎮 Interactive Playground
 
-Visit our [Badge Playground](https://discord-live-members-count-badge.vercel.app/) to:
+Visit our [Badge Playground](https://live-members-count.rohansrma.me/) to:
 
 - **🎨 Customize Colors** - Choose from presets or use custom hex colors
 - **📝 Edit Labels** - Create custom text for your badges
@@ -296,7 +296,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/RS-labhub/discord-live-members-badge/issues)
 - 💬 **Questions**: [GitHub Discussions](https://github.com/RS-labhub/discord-live-members-badge/discussions)
 - 📧 **Email**: rs4101976@gmail.com
-- 🌐 **Documentation**: [Live Documentation](https://discord-live-members-count-badge.vercel.app/documentation)
+- 🌐 **Documentation**: [Live Documentation](https://live-members-count.rohansrma.me/documentation)
 
 ---
 
